@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Luke/Documents/P2A/GB1 Fibre Optic Project/clock_recovery/tx_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tx_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/tx_tb/out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">out</obj_property>
+      <obj_property name="ObjectShortName">out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tx_tb/clk_bit" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_bit</obj_property>
+      <obj_property name="ObjectShortName">clk_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tx_tb/uut/clk_word" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_word</obj_property>
+      <obj_property name="ObjectShortName">clk_word</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tx_tb/uut/bitcount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bitcount[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bitcount[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tx_tb/uut/d_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_out[9:0]</obj_property>
+      <obj_property name="ObjectShortName">d_out[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tx_tb/d_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">d_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tx_tb/prbs_on" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">prbs_on</obj_property>
+      <obj_property name="ObjectShortName">prbs_on</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tx_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+</wave_config>
