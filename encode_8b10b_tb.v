@@ -22,12 +22,15 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
+`define BIT_TIME 100
+
 module encode_8b10b_tb;
 
 	// Inputs
 	reg clk;
 	reg rst;
 	reg [7:0] d_in;
+    reg nextword_enable;
 
 	// Outputs
 	wire [9:0] d_out;
@@ -37,18 +40,26 @@ module encode_8b10b_tb;
 		.clk(clk), 
 		.rst(rst), 
 		.d_in(d_in), 
-		.d_out(d_out)
+		.d_out(d_out),
+        .nextword_enable(nextword_enable)
 	);
 
-    always #100 clk = ~clk;
+    always #(`BIT_TIME / 2) clk = ~clk;
 
-    always #2000 d_in = d_in + 1;
-
+    always begin
+        #(`BIT_TIME * 9) 
+        d_in = d_in + 1;
+        nextword_enable <= 1;
+        #`BIT_TIME
+        nextword_enable <= 0;
+    end
+    
 	initial begin
 		// Initialize Inputs
-		clk = 0;
+		clk = 1;
 		rst = 1;
 		d_in = 0;
+        nextword_enable = 0;
 
 		// Wait 100 ns for global reset to finish
 		#100;

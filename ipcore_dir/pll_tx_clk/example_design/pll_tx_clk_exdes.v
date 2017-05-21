@@ -66,17 +66,15 @@ module pll_tx_clk_exdes
   input         COUNTER_RESET,
   output [1:1]  CLK_OUT,
   // High bits of counters driven by clocks
-  output        COUNT,
-  // Status and control signals
-  output        LOCKED
+  output        COUNT
  );
 
   // Parameters for the counters
   //-------------------------------
   // Counter width
   localparam    C_W       = 16;
-  // When the clock goes out of lock, reset the counters
-  wire          reset_int = !LOCKED || COUNTER_RESET;
+  // Create reset for the counters
+  wire          reset_int = COUNTER_RESET;
 
    reg rst_sync;
    reg rst_sync_int;
@@ -97,9 +95,7 @@ module pll_tx_clk_exdes
    (// Clock in ports
     .CLK_IN1            (CLK_IN1),
     // Clock out ports
-    .CLK_OUT1           (clk_int),
-    // Status and control signals
-    .LOCKED             (LOCKED));
+    .CLK_OUT1           (clk_int));
 
   assign clk_n = ~clk;
 

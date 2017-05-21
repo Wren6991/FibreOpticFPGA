@@ -99,14 +99,6 @@ group clear 0 end
 group insert \
     {pll_sample_clk_tb.dut.counter} \
 
-group using {Status/control}
-group set -overlay 0
-group set -comment {}
-group clear 0 end
-
-group insert \
-   {nc::pll_sample_clk_tb.LOCKED}
-
 
 set id [waveform add -signals [list {nc::pll_sample_clk_tb.COUNT} ]]
 

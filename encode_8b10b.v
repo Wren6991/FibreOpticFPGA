@@ -22,6 +22,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module encode_8b10b(
     input clk,
+    input nextword_enable,
     input rst,
     input [7:0] d_in,
     output reg [9:0] d_out
@@ -98,7 +99,7 @@ always @ (posedge clk or posedge rst) begin
     if (rst) begin
         rd <= 0;
         d_out <= 0;
-    end else begin
+    end else if (nextword_enable) begin
         // Decide which codewords *need* inversion to maintain DC balance
         case ({rd, b6_parity, b4_parity})
             3'b000: {b6_invert, b4_invert} = 2'b01;
@@ -115,8 +116,8 @@ always @ (posedge clk or posedge rst) begin
         
         // Also consider special cases which are inverted to guarantee run-length
         d_out <= {
-            (b4_invert) ? ~b4 : b4,
-            (b6_invert) ? ~b6 : b6
+            (b4_invert | ((d_in[7:5] == 3) & rd)) ? ~b4 : b4,
+            (b6_invert | ((d_in[4:0] == 7) & rd)) ? ~b6 : b6
         };
     end
 end

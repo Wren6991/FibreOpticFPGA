@@ -45,7 +45,7 @@ module tx_tb;
 		.d_in(d_in),
 		.prbs_on(prbs_on), 
 		.out(out),
-        .clk_word(clk_word)
+        .nextword_enable(clk_word)
 	);
 
     always #(`BIT_TIME/2) clk_bit = ~clk_bit;

@@ -25,7 +25,7 @@ SET_PREFERENCE createndf false
 SET_PREFERENCE removerpms false
 SET_PARAMETER Component_Name pll_sample_clk
 SET_PARAMETER Use_Freq_Synth true
-SET_PARAMETER Use_Phase_Alignment false
+SET_PARAMETER Use_Phase_Alignment true
 SET_PARAMETER Use_Min_Power false
 SET_PARAMETER Use_Dyn_Phase_Shift false
 SET_PARAMETER Use_Dyn_Reconfig false
@@ -121,7 +121,7 @@ SET_PARAMETER CLKFB_OUT_P_port CLKFB_OUT_P
 SET_PARAMETER CLKFB_OUT_N_port CLKFB_OUT_N
 SET_PARAMETER Platform nt64
 SET_PARAMETER Summary_Strings empty
-SET_PARAMETER Use_Locked true
+SET_PARAMETER Use_Locked false
 SET_PARAMETER calc_done DONE
 SET_PARAMETER Use_Reset false
 SET_PARAMETER Use_Power_Down false
@@ -191,7 +191,7 @@ SET_PARAMETER Dcm_Clkin_Period 10.000
 SET_PARAMETER Dcm_Clkout_Phase_Shift NONE
 SET_PARAMETER Dcm_Deskew_Adjust SYSTEM_SYNCHRONOUS
 SET_PARAMETER Dcm_Phase_Shift 0
-SET_PARAMETER Dcm_Clk_Feedback NONE
+SET_PARAMETER Dcm_Clk_Feedback 1X
 SET_PARAMETER Dcm_Startup_Wait false
 SET_PARAMETER Dcm_Clk_Out1_Port CLKFX
 SET_PARAMETER Dcm_Clk_Out2_Port CLK0
@@ -219,7 +219,7 @@ SET_PARAMETER Pll_Clkfbout_Phase 0.000
 SET_PARAMETER Pll_Clk_Feedback CLKFBOUT
 SET_PARAMETER Pll_Divclk_Divide 1
 SET_PARAMETER Pll_Clkin_Period 10.000
-SET_PARAMETER Pll_Compensation INTERNAL
+SET_PARAMETER Pll_Compensation SYSTEM_SYNCHRONOUS
 SET_PARAMETER Pll_Ref_Jitter 0.010
 SET_PARAMETER Pll_Clkout0_Divide 1
 SET_PARAMETER Pll_Clkout0_Duty_Cycle 0.500

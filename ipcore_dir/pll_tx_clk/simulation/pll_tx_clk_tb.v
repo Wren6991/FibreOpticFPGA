@@ -57,7 +57,7 @@
 
 `timescale 1ps/1ps
 
-`define wait_lock @(posedge LOCKED)
+`define wait_lock @(posedge dut.clknetwork.dcm_sp_inst.LOCKED)
 
 module pll_tx_clk_tb ();
 
@@ -80,8 +80,6 @@ module pll_tx_clk_tb ();
 
   // The high bit of the sampling counter
   wire        COUNT;
-  // Status and control signals
-  wire        LOCKED;
   reg         COUNTER_RESET = 0;
 wire [1:1] CLK_OUT;
 //Freq Check using the M & D values setting and actual Frequency generated
@@ -128,9 +126,7 @@ wire [1:1] CLK_OUT;
     .COUNTER_RESET      (COUNTER_RESET),
     .CLK_OUT            (CLK_OUT),
     // High bits of the counters
-    .COUNT              (COUNT),
-    // Status and control signals
-    .LOCKED             (LOCKED));
+    .COUNT              (COUNT));
 
 // Freq Check 
 

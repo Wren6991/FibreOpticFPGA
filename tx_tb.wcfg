@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Luke/Documents/P2A/GB1 Fibre Optic Project/clock_recovery/encode_8b10b_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="encode_8b10b_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/encode_8b10b_tb/uut/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/nextword_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nextword_enable</obj_property>
+      <obj_property name="ObjectShortName">nextword_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/d_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">d_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/d_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_out[9:0]</obj_property>
+      <obj_property name="ObjectShortName">d_out[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/rd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd</obj_property>
+      <obj_property name="ObjectShortName">rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/b6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b6[5:0]</obj_property>
+      <obj_property name="ObjectShortName">b6[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/b4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">b4[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b4[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/b6_parity" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">b6_parity</obj_property>
+      <obj_property name="ObjectShortName">b6_parity</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/b4_parity" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">b4_parity</obj_property>
+      <obj_property name="ObjectShortName">b4_parity</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/b6_invert" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">b6_invert</obj_property>
+      <obj_property name="ObjectShortName">b6_invert</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_8b10b_tb/uut/b4_invert" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">b4_invert</obj_property>
+      <obj_property name="ObjectShortName">b4_invert</obj_property>
+   </wvobject>
+</wave_config>
