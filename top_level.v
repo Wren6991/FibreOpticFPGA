@@ -33,7 +33,6 @@ module top_level(
     
     wire clk_sample;
     wire clk_bit_tx;
-    reg rx_in_sync;
     
     pll_tx_clk pll_t(
         .CLK_IN1(clk_12mhz),
@@ -45,12 +44,11 @@ module top_level(
         .CLK_OUT1(clk_sample)
     );
     
-    clock_data_recovery cdr(
+    rx rx(
         .clk_x8(clk_sample),
         .rst(rst),
-        .d_in(rx_in_sync),
-        .d_out(rx_out),
-        .clk_out(clk_recovered)
+        .d_in(rx_in),
+        .clk_recovered(clk_recovered)
      );
     
     tx tx(
@@ -60,7 +58,4 @@ module top_level(
         .out(tx_out)
     );
 
-always @ (posedge clk_sample) begin
-    rx_in_sync <= rx_in;
-end
 endmodule

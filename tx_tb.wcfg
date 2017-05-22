@@ -3,60 +3,60 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="C:/Users/Luke/Documents/P2A/GB1 Fibre Optic Project/clock_recovery/encode_8b10b_tb_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="C:/Users/Luke/Documents/P2A/GB1 Fibre Optic Project/clock_recovery/link_idle_tb_isim_beh.wdb" id="1" type="auto">
          <top_modules>
-            <top_module name="encode_8b10b_tb" />
             <top_module name="glbl" />
+            <top_module name="link_idle_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <WVObjectSize size="12" />
-   <wvobject fp_name="/encode_8b10b_tb/uut/clk" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/nextword_enable" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">nextword_enable</obj_property>
-      <obj_property name="ObjectShortName">nextword_enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/rst" type="logic" db_ref_id="1">
+   <wvobject fp_name="/link_idle_tb/rst" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/d_in" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">d_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">d_in[7:0]</obj_property>
+   <wvobject fp_name="/link_idle_tb/clk_x8" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_x8</obj_property>
+      <obj_property name="ObjectShortName">clk_x8</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/d_out" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">d_out[9:0]</obj_property>
-      <obj_property name="ObjectShortName">d_out[9:0]</obj_property>
+   <wvobject fp_name="/link_idle_tb/clk_tx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_tx</obj_property>
+      <obj_property name="ObjectShortName">clk_tx</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/rd" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rd</obj_property>
-      <obj_property name="ObjectShortName">rd</obj_property>
+   <wvobject fp_name="/link_idle_tb/clk_recovered" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_recovered</obj_property>
+      <obj_property name="ObjectShortName">clk_recovered</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/b6" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">b6[5:0]</obj_property>
-      <obj_property name="ObjectShortName">b6[5:0]</obj_property>
+   <wvobject fp_name="/link_idle_tb/rx_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rx_in</obj_property>
+      <obj_property name="ObjectShortName">rx_in</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/b4" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">b4[3:0]</obj_property>
-      <obj_property name="ObjectShortName">b4[3:0]</obj_property>
+   <wvobject fp_name="/link_idle_tb/reframe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reframe</obj_property>
+      <obj_property name="ObjectShortName">reframe</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/b6_parity" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">b6_parity</obj_property>
-      <obj_property name="ObjectShortName">b6_parity</obj_property>
+   <wvobject fp_name="/link_idle_tb/tx_read_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_read_enable</obj_property>
+      <obj_property name="ObjectShortName">tx_read_enable</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/b4_parity" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">b4_parity</obj_property>
-      <obj_property name="ObjectShortName">b4_parity</obj_property>
+   <wvobject fp_name="/link_idle_tb/tx_idle" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_idle</obj_property>
+      <obj_property name="ObjectShortName">tx_idle</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/b6_invert" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">b6_invert</obj_property>
-      <obj_property name="ObjectShortName">b6_invert</obj_property>
+   <wvobject fp_name="/link_idle_tb/tx_din_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_din_valid</obj_property>
+      <obj_property name="ObjectShortName">tx_din_valid</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_8b10b_tb/uut/b4_invert" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">b4_invert</obj_property>
-      <obj_property name="ObjectShortName">b4_invert</obj_property>
+   <wvobject fp_name="/link_idle_tb/tx_din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_din[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_din[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/link_idle_tb/d_out_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">d_out_valid</obj_property>
+      <obj_property name="ObjectShortName">d_out_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/link_idle_tb/d_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">d_out[7:0]</obj_property>
    </wvobject>
 </wave_config>
