@@ -23,9 +23,9 @@
       <obj_property name="ElementShortName">clk_tx</obj_property>
       <obj_property name="ObjectShortName">clk_tx</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/clk_recovered" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">clk_recovered</obj_property>
-      <obj_property name="ObjectShortName">clk_recovered</obj_property>
+   <wvobject fp_name="/link_idle_tb/not_clk_recovered" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">not_clk_recovered</obj_property>
+      <obj_property name="ObjectShortName">not_clk_recovered</obj_property>
    </wvobject>
    <wvobject fp_name="/link_idle_tb/rx_in" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rx_in</obj_property>

@@ -1,25 +1,11 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    19:41:20 05/21/2017 
-// Design Name: 
-// Module Name:    rx 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
+// rx.v
+// The receiver state machine. Contains clock/data recovery and 8b/10b decoder modules.
+// Responsible for reframing the data on detection of idle sequences.
 
 `include "txrx_incl.vh"
+
 
 module rx(
     input clk_x8,

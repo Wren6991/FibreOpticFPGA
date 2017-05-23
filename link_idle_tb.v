@@ -22,6 +22,9 @@ module link_idle_tb;
 	wire d_out_valid;
 	wire reframe;
 	wire clk_recovered;
+	wire not_clk_recovered;
+	
+	assign not_clk_recovered = ~clk_recovered;
     
     wire tx_read_enable;
     wire tx_idle;

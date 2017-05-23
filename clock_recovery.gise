@@ -61,14 +61,15 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="encode_8b10b_summary.html"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="encode_8b10b_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="encode_8b10b_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="encode_decode_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="encode_decode_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="encode_decode_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="link_idle_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="link_idle_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="link_idle_tb_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="prbs_cdr_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="prbs_cdr_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="rx.prj"/>
@@ -153,7 +154,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1495458924" xil_pn:in_ck="6929039065043372604" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495458924">
+    <transform xil_pn:end_ts="1495542015" xil_pn:in_ck="1521425941287946694" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1495542015">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="clock_data_recovery.v"/>
@@ -161,6 +162,7 @@
       <outfile xil_pn:name="decode_8b10b.v"/>
       <outfile xil_pn:name="encode_8b10b.v"/>
       <outfile xil_pn:name="encode_8b10b_tb.v"/>
+      <outfile xil_pn:name="encode_decode_tb.v"/>
       <outfile xil_pn:name="link_idle_tb.v"/>
       <outfile xil_pn:name="prbs_cdr_tb.v"/>
       <outfile xil_pn:name="rx.v"/>
@@ -169,15 +171,15 @@
       <outfile xil_pn:name="tx_tb.v"/>
       <outfile xil_pn:name="txrx_incl.vh"/>
     </transform>
-    <transform xil_pn:end_ts="1495457240" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7185259101746773047" xil_pn:start_ts="1495457240">
+    <transform xil_pn:end_ts="1495542015" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2765132854233126723" xil_pn:start_ts="1495542015">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1495457240" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8320091878678847989" xil_pn:start_ts="1495457240">
+    <transform xil_pn:end_ts="1495542015" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5971341109821053563" xil_pn:start_ts="1495542015">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1495455607" xil_pn:in_ck="2546850431357102464" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2218644577035828064" xil_pn:start_ts="1495455607">
+    <transform xil_pn:end_ts="1495542015" xil_pn:in_ck="2546850431357102464" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2218644577035828064" xil_pn:start_ts="1495542015">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/pll_sample_clk.v"/>
@@ -185,7 +187,7 @@
       <outfile xil_pn:name="ipcore_dir/pll_tx_clk.v"/>
       <outfile xil_pn:name="ipcore_dir/pll_tx_clk/example_design/pll_tx_clk_exdes.v"/>
     </transform>
-    <transform xil_pn:end_ts="1495458924" xil_pn:in_ck="-1406193528315329400" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1495458924">
+    <transform xil_pn:end_ts="1495542015" xil_pn:in_ck="-5779616185225628142" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1495542015">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="clock_data_recovery.v"/>
@@ -193,6 +195,7 @@
       <outfile xil_pn:name="decode_8b10b.v"/>
       <outfile xil_pn:name="encode_8b10b.v"/>
       <outfile xil_pn:name="encode_8b10b_tb.v"/>
+      <outfile xil_pn:name="encode_decode_tb.v"/>
       <outfile xil_pn:name="ipcore_dir/pll_sample_clk.v"/>
       <outfile xil_pn:name="ipcore_dir/pll_sample_clk/example_design/pll_sample_clk_exdes.v"/>
       <outfile xil_pn:name="ipcore_dir/pll_tx_clk.v"/>
@@ -205,22 +208,22 @@
       <outfile xil_pn:name="tx_tb.v"/>
       <outfile xil_pn:name="txrx_incl.vh"/>
     </transform>
-    <transform xil_pn:end_ts="1495458927" xil_pn:in_ck="-5534833881833835656" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6683994553355105773" xil_pn:start_ts="1495458924">
+    <transform xil_pn:end_ts="1495542018" xil_pn:in_ck="7122732732990437506" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5044463349347879495" xil_pn:start_ts="1495542015">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="encode_decode_tb_beh.prj"/>
+      <outfile xil_pn:name="encode_decode_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="link_idle_tb_beh.prj"/>
-      <outfile xil_pn:name="link_idle_tb_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1495458927" xil_pn:in_ck="-118616344147703088" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8699700984644684251" xil_pn:start_ts="1495458927">
+    <transform xil_pn:end_ts="1495542018" xil_pn:in_ck="-5933213984930057819" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7643900644525507993" xil_pn:start_ts="1495542018">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="encode_decode_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="link_idle_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1495205088" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1495205088">
       <status xil_pn:value="SuccessfullyRun"/>

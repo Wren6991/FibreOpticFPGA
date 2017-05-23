@@ -1,28 +1,11 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   17:02:20 05/20/2017
-// Design Name:   clock_data_recovery
-// Module Name:   C:/Users/Luke/Documents/P2A/GB1 Fibre Optic Project/clock_recovery/prbs_cdr_tb.v
-// Project Name:  clock_recovery
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: clock_data_recovery
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 `define BIT_TIME 100
+
+// Input a pseudorandom sequence into the CDR unit, with a 5% clock rate mismatch.
+// Check that the CDR can correctly recover the clock and the data sequence.
+// The output clock should be in antiphase with the original data clock (sample on rising edge, => 
+// rising edge halfway between data transitions => halfway between TX clk rising edges)
 
 module prbs_cdr_tb;
 

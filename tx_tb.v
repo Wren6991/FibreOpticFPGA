@@ -1,28 +1,9 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   17:12:59 05/19/2017
-// Design Name:   tx
-// Module Name:   C:/Users/Luke/Documents/P2A/GB1 Fibre Optic Project/clock_recovery/tx_tb.v
-// Project Name:  clock_recovery
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: tx
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 `define BIT_TIME 100
+
+// Purpose: turn the TX on. Initially, provide no valid data, and observe that it enters the idle state and outputs a correct idle sequence.
+// Then provide data and observe that the data is correctly encoded and shifted out onto the line.
 
 module tx_tb;
 

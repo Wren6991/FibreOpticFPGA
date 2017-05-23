@@ -1,25 +1,8 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    13:52:37 05/19/2017 
-// Design Name: 
-// Module Name:    encode_8b10b 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//      Encoder for IBM 8b/10b line coding
-//      Guarantees DC balance and a max run length of 5 1s/0s.
-//      Based on information from this article: https://en.wikipedia.org/wiki/8b/10b_encoding
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
+// Encoder for IBM 8b/10b line coding
+// Guarantees DC balance and a max run length of 5 1s/0s.
+// Based on information from this article: https://en.wikipedia.org/wiki/8b/10b_encoding
 
 `include "txrx_incl.vh"
 
