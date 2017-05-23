@@ -15,43 +15,43 @@
   <version xil_pn:ise_version="14.5" xil_pn:schema_version="2"/>
 
   <files>
-    <file xil_pn:name="encode_8b10b.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/encode_8b10b.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="1"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
-    <file xil_pn:name="encode_8b10b_tb.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/encode_8b10b_tb.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="2"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="2"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="2"/>
     </file>
-    <file xil_pn:name="tx.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/tx.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
     </file>
-    <file xil_pn:name="tx_tb.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/tx_tb.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="63"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="63"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="63"/>
     </file>
-    <file xil_pn:name="clock_data_recovery.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/clock_data_recovery.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
     </file>
-    <file xil_pn:name="clock_data_recovery_tb.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/clock_data_recovery_tb.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="77"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="77"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="77"/>
     </file>
-    <file xil_pn:name="prbs_cdr_tb.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/prbs_cdr_tb.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="116"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="116"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="116"/>
     </file>
-    <file xil_pn:name="top_level.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/top_level.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="8"/>
     </file>
@@ -66,11 +66,11 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="6"/>
     </file>
-    <file xil_pn:name="rx.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/rx.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
     </file>
-    <file xil_pn:name="decode_8b10b.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/decode_8b10b.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="2"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
     </file>
@@ -78,13 +78,13 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
-    <file xil_pn:name="link_idle_tb.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/link_idle_tb.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="157"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="157"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="157"/>
     </file>
-    <file xil_pn:name="encode_decode_tb.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/encode_decode_tb.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="3"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="159"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="159"/>
@@ -442,6 +442,7 @@
     <!-- project is analyzed based on files automatically identified as       -->
     <!-- include files.                                                       -->
     <file xil_pn:name="txrx_incl.vh" xil_pn:type="FILE_VERILOG"/>
+    <file xil_pn:name="src/txrx_incl.vh" xil_pn:type="FILE_VERILOG"/>
   </autoManagedFiles>
 
 </project>
