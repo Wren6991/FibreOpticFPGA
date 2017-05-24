@@ -3,36 +3,50 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="C:/Users/Luke/Documents/P2A/GB1 Fibre Optic Project/clock_recovery/link_idle_tb_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="D:/Documents/FibreOpticFPGA/encode_decode_tb_isim_beh.wdb" id="1" type="auto">
          <top_modules>
+            <top_module name="encode_decode_tb" />
             <top_module name="glbl" />
-            <top_module name="link_idle_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="6" />
-   <wvobject fp_name="/link_idle_tb/rx/decoded_bits" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">decoded_bits[7:0]</obj_property>
-      <obj_property name="ObjectShortName">decoded_bits[7:0]</obj_property>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/encode_decode_tb/encode_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">encode_out[9:0]</obj_property>
+      <obj_property name="ObjectShortName">encode_out[9:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/rx/bits" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">bits[9:0]</obj_property>
-      <obj_property name="ObjectShortName">bits[9:0]</obj_property>
+   <wvobject fp_name="/encode_decode_tb/decode_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">decode_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">decode_out[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/rx/bit_counter" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">bit_counter[3:0]</obj_property>
-      <obj_property name="ObjectShortName">bit_counter[3:0]</obj_property>
+   <wvobject fp_name="/encode_decode_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/rx/d_out" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">d_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">d_out[7:0]</obj_property>
+   <wvobject fp_name="/encode_decode_tb/nextword_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">nextword_enable</obj_property>
+      <obj_property name="ObjectShortName">nextword_enable</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/rx/d_out_valid" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">d_out_valid</obj_property>
-      <obj_property name="ObjectShortName">d_out_valid</obj_property>
+   <wvobject fp_name="/encode_decode_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/rx/reframe" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">reframe</obj_property>
-      <obj_property name="ObjectShortName">reframe</obj_property>
+   <wvobject fp_name="/encode_decode_tb/idle" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">idle</obj_property>
+      <obj_property name="ObjectShortName">idle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_decode_tb/d_in" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">d_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">d_in[7:0]</obj_property>
+      <obj_property name="label">d_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_decode_tb/encode_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">encode_out[9:0]</obj_property>
+      <obj_property name="ObjectShortName">encode_out[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/encode_decode_tb/decode_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">decode_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">decode_out[7:0]</obj_property>
    </wvobject>
 </wave_config>

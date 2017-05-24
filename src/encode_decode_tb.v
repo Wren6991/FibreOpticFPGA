@@ -16,6 +16,7 @@ module encode_decode_tb;
 	// Outputs
 	wire [9:0] encode_out;
 	wire [7:0] decode_out;
+	reg match;
 
 	encode_8b10b uut (
 		.clk(clk), 
@@ -36,6 +37,10 @@ module encode_decode_tb;
     always begin
         #(`BIT_TIME * 2) 
         d_in = d_in + 1;
+    end
+
+    always @ (*) begin
+    	match = (decode_out == d_in);
     end
     
 	initial begin

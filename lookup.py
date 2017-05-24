@@ -44,20 +44,29 @@ table_3b4b = """0	1011	100
 111	1110	1
 111	111	1000"""
 
-encode_format_5b6b = "5'b%05d: 6'b%06d"
+encode_format_5b6b = "6'b%s: b6 = 6'b%s;"
+encode_format_3b4b = "5'b?%s: b4 = 4'b%s;"
 
-decode_format_5b6b = "6'b%06d: d_out[4:0] = 5'b%05d;"
-decode_format_3b4b = "4'b%04d: d_out[7:5] = 3'b%03d;"
-def encode_table(data, format_string):
+decode_format_5b6b = "6'b%s: d_out[4:0] = 5'b%s;"
+decode_format_3b4b = "4'b%s: d_out[7:5] = 3'b%s;"
+
+def encode_table(data, w1, w2, format_string):
+    # The output must be reversed ([::-1]) due to
+    # back to front convention used on Wikipedia page
     data = [d.split("\t") for d in data.split("\n")]
     for row in data:
-        print(format_string % (int(row[0]), int(row[1])))
-
-def decode_table(data, format_string):
+        if row[2] == "":
+            print(format_string % ("?" + row[0].zfill(w1), row[1].zfill(w2)[::-1]))
+        else:
+            print(format_string % ("0" + row[0].zfill(w1), row[1].zfill(w2)[::-1]))
+            print(format_string % ("1" + row[0].zfill(w1), row[2].zfill(w2)[::-1]))
+           
+def decode_table(data, w1, w2, format_string):
     data = [d.split("\t") for d in data.split("\n")]
     for row in data:
         for codeword in row[1:]:
             if len(codeword) == 0:
                 continue
-            print(format_string % (int(codeword), int(row[0])))
+            print(format_string % (codeword.zfill(w1)[::-1], row[0].zfill(w2)))
+
 
