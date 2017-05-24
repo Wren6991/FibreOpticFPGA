@@ -22,8 +22,10 @@ module encode_8b10b(
     // Whether b6/b4 has a balance of ones and zeroes
     reg b6_parity;
     reg b4_parity;
+    reg [5:0] n_b6;
+    reg [3:0] n_b4;
 
-always @ (d_in) begin
+always @ (*) begin
     case (d_in[4:0]) 
         5'b00000: b6 = 6'b100111;
         5'b00001: b6 = 6'b011101;
@@ -79,6 +81,24 @@ always @ (d_in) begin
     endcase
     
     b4_parity = (b4[3] + b4[2] + b4[1] + b4[0]) == 2;
+
+    // Decide which codewords *need* inversion to maintain DC balance
+    case ({rd, b6_parity, b4_parity})
+        3'b000: {b6_invert, b4_invert} = 2'b01;
+        3'b001: {b6_invert, b4_invert} = 2'b00;
+        3'b010: {b6_invert, b4_invert} = 2'b00;
+        3'b011: {b6_invert, b4_invert} = 2'b00;
+        3'b100: {b6_invert, b4_invert} = 2'b10;
+        3'b101: {b6_invert, b4_invert} = 2'b10;
+        3'b110: {b6_invert, b4_invert} = 2'b01;
+        3'b111: {b6_invert, b4_invert} = 2'b00;
+    endcase
+
+    // Final (potentially inverted) values for half-symbols b4 and b6.
+    // Must also consider special cases which are inverted to guarantee run-length
+    n_b4 = (b4_invert || (0& (d_in[7:5] == 3) && rd)) ? ~b4 : b4;
+    n_b6 = (b6_invert || ((d_in[4:0] == 7) && n_b4[0])) ? ~b6 : b6;
+
 end
 
 reg b6_invert, b4_invert;
@@ -91,24 +111,13 @@ always @ (posedge clk or posedge rst) begin
             d_out <= rd ? `COMMA_NEGTV : `COMMA_POSTV;
             rd <= ~rd;
         end else begin
-            // Decide which codewords *need* inversion to maintain DC balance
-            case ({rd, b6_parity, b4_parity})
-                3'b000: {b6_invert, b4_invert} = 2'b01;
-                3'b001: {b6_invert, b4_invert} = 2'b00;
-                3'b010: {b6_invert, b4_invert} = 2'b00;
-                3'b011: {b6_invert, b4_invert} = 2'b00;
-                3'b100: {b6_invert, b4_invert} = 2'b10;
-                3'b101: {b6_invert, b4_invert} = 2'b10;
-                3'b110: {b6_invert, b4_invert} = 2'b01;
-                3'b111: {b6_invert, b4_invert} = 2'b00;
-            endcase
+
             
             rd <= rd ^ b6_parity ^ b4_parity;
             
-            // Also consider special cases which are inverted to guarantee run-length
             d_out <= {
-                (b4_invert | ((d_in[7:5] == 3) & rd)) ? ~b4 : b4,
-                (b6_invert | ((d_in[4:0] == 7) & rd)) ? ~b6 : b6
+                n_b4,
+                n_b6
             };
         end
     end

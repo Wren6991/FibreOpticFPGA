@@ -10,53 +10,29 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="12" />
-   <wvobject fp_name="/link_idle_tb/rst" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/link_idle_tb/rx/decoded_bits" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">decoded_bits[7:0]</obj_property>
+      <obj_property name="ObjectShortName">decoded_bits[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/clk_x8" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">clk_x8</obj_property>
-      <obj_property name="ObjectShortName">clk_x8</obj_property>
+   <wvobject fp_name="/link_idle_tb/rx/bits" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bits[9:0]</obj_property>
+      <obj_property name="ObjectShortName">bits[9:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/clk_tx" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">clk_tx</obj_property>
-      <obj_property name="ObjectShortName">clk_tx</obj_property>
+   <wvobject fp_name="/link_idle_tb/rx/bit_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bit_counter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_counter[3:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/not_clk_recovered" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">not_clk_recovered</obj_property>
-      <obj_property name="ObjectShortName">not_clk_recovered</obj_property>
+   <wvobject fp_name="/link_idle_tb/rx/d_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">d_out[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/rx_in" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">rx_in</obj_property>
-      <obj_property name="ObjectShortName">rx_in</obj_property>
-   </wvobject>
-   <wvobject fp_name="/link_idle_tb/reframe" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">reframe</obj_property>
-      <obj_property name="ObjectShortName">reframe</obj_property>
-   </wvobject>
-   <wvobject fp_name="/link_idle_tb/tx_read_enable" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">tx_read_enable</obj_property>
-      <obj_property name="ObjectShortName">tx_read_enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/link_idle_tb/tx_idle" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">tx_idle</obj_property>
-      <obj_property name="ObjectShortName">tx_idle</obj_property>
-   </wvobject>
-   <wvobject fp_name="/link_idle_tb/tx_din_valid" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">tx_din_valid</obj_property>
-      <obj_property name="ObjectShortName">tx_din_valid</obj_property>
-   </wvobject>
-   <wvobject fp_name="/link_idle_tb/tx_din" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">tx_din[7:0]</obj_property>
-      <obj_property name="ObjectShortName">tx_din[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/link_idle_tb/d_out_valid" type="logic" db_ref_id="1">
+   <wvobject fp_name="/link_idle_tb/rx/d_out_valid" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">d_out_valid</obj_property>
       <obj_property name="ObjectShortName">d_out_valid</obj_property>
    </wvobject>
-   <wvobject fp_name="/link_idle_tb/d_out" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">d_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">d_out[7:0]</obj_property>
+   <wvobject fp_name="/link_idle_tb/rx/reframe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reframe</obj_property>
+      <obj_property name="ObjectShortName">reframe</obj_property>
    </wvobject>
 </wave_config>

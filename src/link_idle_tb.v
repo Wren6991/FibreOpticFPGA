@@ -79,6 +79,8 @@ module link_idle_tb;
             tx_din = tx_din + 1;
         end
 
+        $finish;
+
 	end
       
 endmodule
