@@ -29,7 +29,7 @@ module clock_data_recovery_tb;
     
     always #(`BIT_TIME / 16) clk_x8 = ~clk_x8;
     
-    always #(`BIT_TIME * 1.05) d_in = ~d_in;
+    always #(`BIT_TIME * 0.95) d_in = ~d_in;
 
 	initial begin
 		// Initialize Inputs

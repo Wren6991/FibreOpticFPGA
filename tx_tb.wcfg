@@ -3,50 +3,74 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="D:/Documents/FibreOpticFPGA/encode_decode_tb_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="C:/Users/Luke/Documents/P2A/GB1 Fibre Optic Project/clock_recovery/prbs_cdr_tb_isim_beh.wdb" id="1" type="auto">
          <top_modules>
-            <top_module name="encode_decode_tb" />
             <top_module name="glbl" />
+            <top_module name="prbs_cdr_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="9" />
-   <wvobject fp_name="/encode_decode_tb/encode_out" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">encode_out[9:0]</obj_property>
-      <obj_property name="ObjectShortName">encode_out[9:0]</obj_property>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/prbs_cdr_tb/uut/clk_x8" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_x8</obj_property>
+      <obj_property name="ObjectShortName">clk_x8</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_decode_tb/decode_out" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">decode_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">decode_out[7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/encode_decode_tb/clk" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/encode_decode_tb/nextword_enable" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">nextword_enable</obj_property>
-      <obj_property name="ObjectShortName">nextword_enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/encode_decode_tb/rst" type="logic" db_ref_id="1">
+   <wvobject fp_name="/prbs_cdr_tb/uut/rst" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">rst</obj_property>
       <obj_property name="ObjectShortName">rst</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_decode_tb/idle" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">idle</obj_property>
-      <obj_property name="ObjectShortName">idle</obj_property>
+   <wvobject fp_name="/prbs_cdr_tb/uut/d_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">d_in</obj_property>
+      <obj_property name="ObjectShortName">d_in</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_decode_tb/d_in" type="array" db_ref_id="1">
+   <wvobject fp_name="/prbs_cdr_tb/test_tx/clk_bit" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_bit</obj_property>
+      <obj_property name="ObjectShortName">clk_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prbs_cdr_tb/uut/clk_out" type="logic" db_ref_id="1">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">d_in[7:0]</obj_property>
-      <obj_property name="ObjectShortName">d_in[7:0]</obj_property>
-      <obj_property name="label">d_in[7:0]</obj_property>
+      <obj_property name="ElementShortName">clk_out</obj_property>
+      <obj_property name="ObjectShortName">clk_out</obj_property>
+      <obj_property name="label">clk_out</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_decode_tb/encode_out" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">encode_out[9:0]</obj_property>
-      <obj_property name="ObjectShortName">encode_out[9:0]</obj_property>
+   <wvobject fp_name="/prbs_cdr_tb/uut/d_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">d_out</obj_property>
+      <obj_property name="ObjectShortName">d_out</obj_property>
    </wvobject>
-   <wvobject fp_name="/encode_decode_tb/decode_out" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">decode_out[7:0]</obj_property>
-      <obj_property name="ObjectShortName">decode_out[7:0]</obj_property>
+   <wvobject fp_name="/prbs_cdr_tb/uut/d_out_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">d_out_valid</obj_property>
+      <obj_property name="ObjectShortName">d_out_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prbs_cdr_tb/uut/history" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">history[7:0]</obj_property>
+      <obj_property name="ObjectShortName">history[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prbs_cdr_tb/uut/clk_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_counter[3:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_counter[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prbs_cdr_tb/uut/counter_top" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">counter_top[3:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_top[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prbs_cdr_tb/uut/sample_delay" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sample_delay[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_delay[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prbs_cdr_tb/uut/ds_acc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ds_acc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ds_acc[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prbs_cdr_tb/uut/ds_inc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ds_inc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ds_inc[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prbs_cdr_tb/uut/ds_width" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ds_width[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ds_width[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/prbs_cdr_tb/uut/counter_top_default" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">counter_top_default[31:0]</obj_property>
+      <obj_property name="ObjectShortName">counter_top_default[31:0]</obj_property>
    </wvobject>
 </wave_config>

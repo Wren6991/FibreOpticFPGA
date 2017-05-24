@@ -17,6 +17,8 @@ module prbs_cdr_tb;
 	wire d_out;
 	wire d_out_valid;
 	wire clk_out;
+	wire nclk_out;
+	assign nclk_out = ~clk_out;
     
     reg clk_bit;
 	wire tx_out;
