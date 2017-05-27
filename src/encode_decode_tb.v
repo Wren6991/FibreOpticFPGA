@@ -55,7 +55,7 @@ module encode_decode_tb;
 		#100;
 		rst = 0;
 
-		#(`BIT_TIME * 100) $finish;
+		#(`BIT_TIME * 'h200) $finish;
 
 	end
    

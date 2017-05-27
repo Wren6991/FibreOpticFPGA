@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 // We oversample the incoming stream by ~8x the bit rate.
-// Always sample the data on the 4th clock of every bit period.
+// Sample the data on the 4th clock of every bit period.
 // When we detect an edge, we reset the clock counter.
 // If the edge appears before the 4th clock, then we have a period of
 // <= 3 clocks with no sampling; effectively we have extended the previous
@@ -23,7 +23,7 @@ module clock_data_recovery(
 parameter ds_width = 8;
 parameter counter_top_default = 7;  // x8 oversampling
     
-reg [7:0] history;
+reg [0:0] history;
 reg [3:0] clk_counter;
 // Combinational "regs":
 reg [3:0] counter_top;
@@ -58,14 +58,14 @@ always @ (posedge clk_x8 or posedge rst)
         ds_inc <= 0;
         clk_out <= 0;
     end else begin
-        history <= {history[6:0], d_in};
+        history <= d_in;
         d_out_valid <= 0; // by default; can override
         
         if (clk_counter == counter_top) begin
             clk_counter <= 0;
             clk_out <= 0;
             // Top bit of counter is not retained for next addition.
-            ds_acc <= {0, ds_acc[ds_width-2:0]} + ds_inc;
+            ds_acc <= {1'b0, ds_acc[ds_width-2:0]} + ds_inc;
         end else begin
             if (clk_counter == sample_delay) begin
                 clk_out <= 1;
