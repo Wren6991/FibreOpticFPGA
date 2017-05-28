@@ -33,7 +33,7 @@ always @ (posedge clk or posedge rst) begin
 	if (rst) begin
 		counter <= 0;
 	end else begin
-		counter <= counter + 1;
+		counter <= counter + 1'b1;
 	end
 end
 

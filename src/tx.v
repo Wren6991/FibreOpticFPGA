@@ -54,7 +54,7 @@ always @ (posedge clk_bit or posedge rst) begin
                         idle <= 1;
                     end
                 end
-                bitcount <= bitcount + 1;
+                bitcount <= bitcount + 1'b1;
             end
             out <= d_out[bitcount];
         end

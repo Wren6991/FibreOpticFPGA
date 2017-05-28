@@ -13,7 +13,7 @@
 CONFIG VCCAUX = "3.3" ;
 
    NET "clk_100mhz"                  LOC = V10     | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz ;     # IO_L30N_GCLK0_USERCCLK_2      Sch = GCLK1
-   NET "clk_12mhz"                   LOC = D9      | IOSTANDARD = LVCMOS33 | PERIOD = 12MHz ;      # IO_L34P_GCLK19_0              Sch = MCLK
+   #NET "clk_12mhz"                   LOC = D9      | IOSTANDARD = LVCMOS33 | PERIOD = 12MHz ;      # IO_L34P_GCLK19_0              Sch = MCLK
    
 ###################################################################################################################################################
 #                                                 UART Interface                                                                                  #
@@ -82,14 +82,14 @@ CONFIG VCCAUX = "3.3" ;
 ###################################################################################################################################################
 #                                                 DIP Switches                                                                                    #
 ################################################################################################################################################### 
-    NET "DPSwitch[0]"                LOC = C17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 8   IO_L29P_A23_M1A13_1        Sch = DP1   
-    NET "DPSwitch[1]"                LOC = C18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 7   IO_L29N_A22_M1A14_1        Sch = DP2
-    NET "DPSwitch[2]"                LOC = D17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 6   IO_L31P_A19_M1CKE_1        Sch = DP3
-    NET "DPSwitch[3]"                LOC = D18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 5   IO_L31N_A18_M1A12_1        Sch = DP4
-    NET "DPSwitch[4]"                LOC = E18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 4   IO_L33N_A14_M1A4_1         Sch = DP5
-    NET "DPSwitch[5]"                LOC = E16     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 3   IO_L33P_A15_M1A10_1        Sch = DP6
-    NET "DPSwitch[6]"                LOC = F18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 2   IO_L35N_A10_M1A2_1         Sch = DP7
-    NET "DPSwitch[7]"                LOC = F17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 1   IO_L35P_A11_M1A7_1         Sch = DP8
+    #NET "DPSwitch[0]"                LOC = C17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 8   IO_L29P_A23_M1A13_1        Sch = DP1   
+    #NET "DPSwitch[1]"                LOC = C18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 7   IO_L29N_A22_M1A14_1        Sch = DP2
+    #NET "DPSwitch[2]"                LOC = D17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 6   IO_L31P_A19_M1CKE_1        Sch = DP3
+    #NET "DPSwitch[3]"                LOC = D18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 5   IO_L31N_A18_M1A12_1        Sch = DP4
+    #NET "DPSwitch[4]"                LOC = E18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 4   IO_L33N_A14_M1A4_1         Sch = DP5
+    #NET "DPSwitch[5]"                LOC = E16     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 3   IO_L33P_A15_M1A10_1        Sch = DP6
+    #NET "DPSwitch[6]"                LOC = F18     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 2   IO_L35N_A10_M1A2_1         Sch = DP7
+    #NET "DPSwitch[7]"                LOC = F17     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;  #DP 1   IO_L35P_A11_M1A7_1         Sch = DP8
     
 ###################################################################################################################################################
 #                                              Push Buttons Switches                                                                              #
@@ -127,18 +127,18 @@ CONFIG VCCAUX = "3.3" ;
 #                                               Seven Segment Display                                                                             #
 ################################################################################################################################################### 
 
-    NET "SevenSegment[0]"            LOC = A3      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #a    IO_L4N_0                Sch = 7Seg_0  
-    NET "SevenSegment[1]"            LOC = B4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #b    IO_L5P_0                Sch = 7Seg_1
-    NET "SevenSegment[2]"            LOC = A4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #c    IO_L5N_0                Sch = 7Seg_2
-    NET "SevenSegment[3]"            LOC = C4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #d    IO_L1N_VREF_0           Sch = 7Seg_4
-    NET "SevenSegment[4]"            LOC = C5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #e    IO_L6P_0                Sch = 7Seg_5
-    NET "SevenSegment[5]"            LOC = D6      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #f    IO_L3P_0                Sch = 7Seg_6
-    NET "SevenSegment[6]"            LOC = C6      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #g    IO_L3N_0                Sch = 7Seg_7
-    NET "SevenSegment[7]"            LOC = A5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #dot  IO_L6N_0                Sch = 7Seg_3
-       
-    NET "SevenSegmentEnable[2]"      LOC = B3      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L4P_0                    Sch = 7Seg_1en  #Enables for Seven Segment
-    NET "SevenSegmentEnable[1]"      LOC = A2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L2N_0                    Sch = 7Seg_2en
-    NET "SevenSegmentEnable[0]"      LOC = B2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L2P_0                    Sch = 7Seg_3en
+    #NET "SevenSegment[0]"            LOC = A3      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #a    IO_L4N_0                Sch = 7Seg_0  
+    #NET "SevenSegment[1]"            LOC = B4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #b    IO_L5P_0                Sch = 7Seg_1
+    #NET "SevenSegment[2]"            LOC = A4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #c    IO_L5N_0                Sch = 7Seg_2
+    #NET "SevenSegment[3]"            LOC = C4      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #d    IO_L1N_VREF_0           Sch = 7Seg_4
+    #NET "SevenSegment[4]"            LOC = C5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #e    IO_L6P_0                Sch = 7Seg_5
+    #NET "SevenSegment[5]"            LOC = D6      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #f    IO_L3P_0                Sch = 7Seg_6
+    #NET "SevenSegment[6]"            LOC = C6      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #g    IO_L3N_0                Sch = 7Seg_7
+    #NET "SevenSegment[7]"            LOC = A5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   #dot  IO_L6N_0                Sch = 7Seg_3
+    
+    #NET "SevenSegmentEnable[2]"      LOC = B3      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L4P_0                    Sch = 7Seg_1en  #Enables for Seven Segment
+    #NET "SevenSegmentEnable[1]"      LOC = A2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L2N_0                    Sch = 7Seg_2en
+    #NET "SevenSegmentEnable[0]"      LOC = B2      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;   # IO_L2P_0                    Sch = 7Seg_3en
 
 ###################################################################################################################################################
 #                                                    Audio                                                                                        #
@@ -178,36 +178,36 @@ CONFIG VCCAUX = "3.3" ;
 ###################################################################################################################################################
 #                                                   HEADER P7                                                                                     #
 ###################################################################################################################################################  
-    #NET "IO_P7[7]"                   LOC = U8      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 1  # IO_L41P_2             Sch = EXP_IO_P5
-    #NET "IO_P7[6]"                   LOC = V8      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 2  # IO_L41N_VREF_2        Sch = EXP_IO_N5
-    #NET "IO_P7[5]"                   LOC = R8      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 3  # IO_L31P_GCLK31_D14_2  Sch = EXP_IO_P6
-    #NET "IO_P7[4]"                   LOC = T8      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 4  # IO_L31N_GCLK30_D15_2  Sch = EXP_IO_N6
-    #NET "IO_P7[3]"                   LOC = R5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 5  # IO_L48P_D7_2          Sch = EXP_IO_P7
-    #NET "IO_P7[2]"                   LOC = T5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 6  # IO_L48N_RDWR_B_VREF_2 Sch = EXP_IO_N7
-    #NET "IO_P7[1]"                   LOC = T9      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 7  # IO_L32P_GCLK29_2      Sch = EXP_IO_P8
-    #NET "IO_P7[0]"                   LOC = V9      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 8  # IO_L32N_GCLK28_2      Sch = EXP_IO_N8
+    NET "IO_P7[7]"                   LOC = U8      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 1  # IO_L41P_2             Sch = EXP_IO_P5
+    NET "IO_P7[6]"                   LOC = V8      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 2  # IO_L41N_VREF_2        Sch = EXP_IO_N5
+    NET "IO_P7[5]"                   LOC = R8      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 3  # IO_L31P_GCLK31_D14_2  Sch = EXP_IO_P6
+    NET "IO_P7[4]"                   LOC = T8      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 4  # IO_L31N_GCLK30_D15_2  Sch = EXP_IO_N6
+    NET "IO_P7[3]"                   LOC = R5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 5  # IO_L48P_D7_2          Sch = EXP_IO_P7
+    NET "IO_P7[2]"                   LOC = T5      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 6  # IO_L48N_RDWR_B_VREF_2 Sch = EXP_IO_N7
+    NET "IO_P7[1]"                   LOC = T9      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 7  # IO_L32P_GCLK29_2      Sch = EXP_IO_P8
+    NET "IO_P7[0]"                   LOC = V9      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 8  # IO_L32N_GCLK28_2      Sch = EXP_IO_N8
 
 ###################################################################################################################################################
 #                                                   HEADER P8                                                                                     #
 ###################################################################################################################################################
-    #NET "IO_P8[7]"                  LOC = R11     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 1   # IO_L16P_2             Sch = EXP_IO_P9
-    #NET "IO_P8[6]"                  LOC = T11     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 2   # IO_L16N_VREF_2        Sch = EXP_IO_N9
-    #NET "IO_P8[5]"                  LOC = R10     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 3   # IO_L29P_GCLK3_2       Sch = EXP_IO_P10
-    #NET "IO_P8[4]"                  LOC = T10     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 4   # IO_L29N_GCLK2_2       Sch = EXP_IO_N10
-    #NET "IO_P8[3]"                  LOC = U13     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 5   # IO_L14P_D11_2         Sch = EXP_IO_P11
-    #NET "IO_P8[2]"                  LOC = V13     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 6   # IO_L14N_D12_2         Sch = EXP_IO_N11
-    #NET "IO_P8[1]"                  LOC = U11     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 7   # IO_L23P_2             Sch = EXP_IO_P12
-    #NET "IO_P8[0]"                  LOC = V11     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 8   # IO_L23N_2             Sch = EXP_IO_N12
+    NET "IO_P8[7]"                  LOC = R11     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 1   # IO_L16P_2             Sch = EXP_IO_P9
+    NET "IO_P8[6]"                  LOC = T11     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 2   # IO_L16N_VREF_2        Sch = EXP_IO_N9
+    NET "IO_P8[5]"                  LOC = R10     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 3   # IO_L29P_GCLK3_2       Sch = EXP_IO_P10
+    NET "IO_P8[4]"                  LOC = T10     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 4   # IO_L29N_GCLK2_2       Sch = EXP_IO_N10
+    NET "IO_P8[3]"                  LOC = U13     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 5   # IO_L14P_D11_2         Sch = EXP_IO_P11
+    NET "IO_P8[2]"                  LOC = V13     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 6   # IO_L14N_D12_2         Sch = EXP_IO_N11
+    NET "IO_P8[1]"                  LOC = U11     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 7   # IO_L23P_2             Sch = EXP_IO_P12
+    NET "IO_P8[0]"                  LOC = V11     | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 8   # IO_L23N_2             Sch = EXP_IO_N12
 
 ###################################################################################################################################################
 #                                                   HEADER P9                                                                                     #
 ###################################################################################################################################################
-    NET "tx_out"                    LOC = H17      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 1   # IO_L43P_GCLK5_M1DQ4_1         Sch = EXP_IO_P15
-    #NET "IO_P9[6]"                 LOC = H18      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 2   # IO_L43N_GCLK4_M1DQ5_1         Sch = EXP_IO_N15
-    NET "rx_in"                     LOC = J16      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 3   # IO_L44P_A3_M1DQ6_1            Sch = EXP_IO_P16
-    #NET "IO_P9[4]"                 LOC = J18      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 4   # IO_L44N_A2_M1DQ7_1            Sch = EXP_IO_N16
-    #NET "clk_recovered"                 LOC = K15      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 5   # IO_L41P_GCLK9_IRDY1_M1RASN_1  Sch = EXP_IO_P13
-    #NET "IO_P9[2]"                 LOC = K16      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 6   # IO_L41N_GCLK8_M1CASN_1        Sch = EXP_IO_N13
-    #NET "IO_P9[1]"                 LOC = L15      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 7   # IO_L42P_GCLK7_M1UDM_1         Sch = EXP_IO_P14
-    #NET "IO_P9[0]"                 LOC = L16      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 8   # IO_L42N_GCLK6_TRDY1_M1LDM_1   Sch = EXP_IO_N14
+    NET "IO_P9[7]"                 LOC = H17      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 1   # IO_L43P_GCLK5_M1DQ4_1         Sch = EXP_IO_P15
+    NET "IO_P9[6]"                 LOC = H18      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 2   # IO_L43N_GCLK4_M1DQ5_1         Sch = EXP_IO_N15
+    NET "IO_P9[5]"                 LOC = J16      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 3   # IO_L44P_A3_M1DQ6_1            Sch = EXP_IO_P16
+    NET "IO_P9[4]"                 LOC = J18      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 4   # IO_L44N_A2_M1DQ7_1            Sch = EXP_IO_N16
+    NET "IO_P9[3]"                 LOC = K15      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 5   # IO_L41P_GCLK9_IRDY1_M1RASN_1  Sch = EXP_IO_P13
+    NET "IO_P9[2]"                 LOC = K16      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 6   # IO_L41N_GCLK8_M1CASN_1        Sch = EXP_IO_N13
+    NET "IO_P9[1]"                 LOC = L15      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 7   # IO_L42P_GCLK7_M1UDM_1         Sch = EXP_IO_P14
+    NET "IO_P9[0]"                 LOC = L16      | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ; #Pin 8   # IO_L42N_GCLK6_TRDY1_M1LDM_1   Sch = EXP_IO_N14
      
