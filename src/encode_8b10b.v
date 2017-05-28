@@ -23,8 +23,6 @@ module encode_8b10b(
 	// Whether b6/b4 has a balance of ones and zeroes
 	reg b6_parity;
 	reg b4_parity;
-	reg [5:0] n_b6;
-	reg [3:0] n_b4;
 
 always @ (*) begin
 	casez ({rd, d_in[4:0]}) 

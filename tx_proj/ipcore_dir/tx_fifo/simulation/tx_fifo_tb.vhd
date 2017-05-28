@@ -84,8 +84,8 @@ ARCHITECTURE tx_fifo_arch OF tx_fifo_tb IS
  SIGNAL  sim_done            : STD_LOGIC := '0';
  SIGNAL  end_of_sim          : STD_LOGIC_VECTOR(4 DOWNTO 0) := (OTHERS => '0');
  -- Write and Read clock periods
- CONSTANT wr_clk_period_by_2 : TIME := 200 ns;
- CONSTANT rd_clk_period_by_2 : TIME := 100 ns;
+ CONSTANT wr_clk_period_by_2 : TIME := 100 ns;
+ CONSTANT rd_clk_period_by_2 : TIME := 200 ns;
  -- Procedures to display strings
  PROCEDURE disp_str(CONSTANT str:IN STRING) IS
     variable dp_l : line := null;   
@@ -106,7 +106,7 @@ BEGIN
   -- Generation of clock
 
   PROCESS BEGIN
-    WAIT FOR 400 ns; -- Wait for global reset
+    WAIT FOR 200 ns; -- Wait for global reset
     WHILE 1 = 1 LOOP
       wr_clk <= '0';
       WAIT FOR wr_clk_period_by_2;
@@ -116,7 +116,7 @@ BEGIN
   END PROCESS;
 
   PROCESS BEGIN
-    WAIT FOR 200 ns;-- Wait for global reset
+    WAIT FOR 400 ns;-- Wait for global reset
     WHILE 1 = 1 LOOP
       rd_clk <= '0';
       WAIT FOR rd_clk_period_by_2;

@@ -55,6 +55,7 @@
 // "Clock    Freq (MHz) (degrees) Cycle (%) Jitter (ps)  Error (ps)"
 //----------------------------------------------------------------------------
 // CLK_OUT1____10.000______0.000______50.0_____2200.000____150.000
+// CLK_OUT2___100.000______0.000______50.0______200.000____150.000
 //
 //----------------------------------------------------------------------------
 // "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -72,6 +73,7 @@
     .CLK_IN1(CLK_IN1),      // IN
     // Clock out ports
     .CLK_OUT1(CLK_OUT1),     // OUT
+    .CLK_OUT2(CLK_OUT2),     // OUT
     // Status and control signals
     .RESET(RESET));       // IN
 // INST_TAG_END ------ End INSTANTIATION Template ---------

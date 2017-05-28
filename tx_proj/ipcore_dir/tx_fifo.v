@@ -45,7 +45,8 @@ module tx_fifo(
   rd_en,
   dout,
   full,
-  empty
+  empty,
+  prog_full
 );
 
 input rst;
@@ -57,6 +58,7 @@ input rd_en;
 output [7 : 0] dout;
 output full;
 output empty;
+output prog_full;
 
 // synthesis translate_off
 
@@ -185,15 +187,15 @@ output empty;
     .C_PROG_EMPTY_TYPE_WACH(0),
     .C_PROG_EMPTY_TYPE_WDCH(0),
     .C_PROG_EMPTY_TYPE_WRCH(0),
-    .C_PROG_FULL_THRESH_ASSERT_VAL(16383),
+    .C_PROG_FULL_THRESH_ASSERT_VAL(15356),
     .C_PROG_FULL_THRESH_ASSERT_VAL_AXIS(1023),
     .C_PROG_FULL_THRESH_ASSERT_VAL_RACH(1023),
     .C_PROG_FULL_THRESH_ASSERT_VAL_RDCH(1023),
     .C_PROG_FULL_THRESH_ASSERT_VAL_WACH(1023),
     .C_PROG_FULL_THRESH_ASSERT_VAL_WDCH(1023),
     .C_PROG_FULL_THRESH_ASSERT_VAL_WRCH(1023),
-    .C_PROG_FULL_THRESH_NEGATE_VAL(16382),
-    .C_PROG_FULL_TYPE(0),
+    .C_PROG_FULL_THRESH_NEGATE_VAL(15355),
+    .C_PROG_FULL_TYPE(1),
     .C_PROG_FULL_TYPE_AXIS(0),
     .C_PROG_FULL_TYPE_RACH(0),
     .C_PROG_FULL_TYPE_RDCH(0),
@@ -261,6 +263,7 @@ output empty;
     .DOUT(dout),
     .FULL(full),
     .EMPTY(empty),
+    .PROG_FULL(prog_full),
     .BACKUP(),
     .BACKUP_MARKER(),
     .CLK(),
@@ -285,7 +288,6 @@ output empty;
     .DATA_COUNT(),
     .RD_DATA_COUNT(),
     .WR_DATA_COUNT(),
-    .PROG_FULL(),
     .PROG_EMPTY(),
     .SBITERR(),
     .DBITERR(),
