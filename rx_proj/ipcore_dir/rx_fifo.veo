@@ -66,7 +66,8 @@ rx_fifo your_instance_name (
   .rd_en(rd_en), // input rd_en
   .dout(dout), // output [7 : 0] dout
   .full(full), // output full
-  .empty(empty) // output empty
+  .empty(empty), // output empty
+  .prog_empty(prog_empty) // output prog_empty
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

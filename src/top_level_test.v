@@ -60,13 +60,6 @@ module top_level(
         .d_in_valid(~Switch[4]),
         .out(tx_out)
     );
-     
-     // Blink light to confirm sample clock is running
-     blinky #(.width(26)) blink(
-        .clk(clk_sample),
-        .rst(rst),
-        .out(LED[7])
-     );
 
      blinky #(.width(18)) blink1(
         .clk(clk_sample),

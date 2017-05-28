@@ -78,12 +78,12 @@ module pll_sample_clk_tb ();
   // Declare the input clock signals
   reg         CLK_IN1     = 1;
 
-  // The high bit of the sampling counter
-  wire        COUNT;
+  // The high bits of the sampling counters
+  wire [2:1]  COUNT;
   // Status and control signals
   reg         RESET      = 0;
   reg         COUNTER_RESET = 0;
-wire [1:1] CLK_OUT;
+wire [2:1] CLK_OUT;
 //Freq Check using the M & D values setting and actual Frequency generated
 
 

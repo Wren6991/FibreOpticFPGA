@@ -47,7 +47,7 @@ always @ (posedge clk_x8 or posedge rst) begin
     end else if (cdr_d_out_valid) begin
         // default assignments: shift and increment
         bits <= {cdr_d_out, bits[9:1]};
-        bit_counter <= bit_counter + 1;
+        bit_counter <= bit_counter + 1'b1;
         d_out_valid <= 0;
         reframe <= 0;
         // Commas (K.28.5) are used to idle the line whilst maintaining clock and framing.

@@ -99,29 +99,20 @@ ARCHITECTURE fg_dv_arch OF rx_fifo_dverif IS
  SIGNAL rand_num          : STD_LOGIC_VECTOR(8*LOOP_COUNT-1 downto 0);
  SIGNAL rd_en_i           : STD_LOGIC := '0';
  SIGNAL pr_r_en           : STD_LOGIC := '0';
- SIGNAL rd_en_d1          : STD_LOGIC := '0';
+ SIGNAL rd_en_d1          : STD_LOGIC := '1';
 BEGIN
 
  
   DOUT_CHK <= data_chk;
   RD_EN    <= rd_en_i;
   rd_en_i  <= PRC_RD_EN;
+  rd_en_d1 <= '1';
   
  
   data_fifo_chk:IF(C_CH_TYPE /=2) GENERATE 
   -------------------------------------------------------
   -- Expected data generation and checking for data_fifo
   -------------------------------------------------------
-      PROCESS (RD_CLK,RESET)
-      BEGIN
-        IF (RESET = '1') THEN
-          rd_en_d1 <= '0';
-        ELSIF (RD_CLK'event AND RD_CLK='1') THEN
-          IF(EMPTY = '0' AND rd_en_i='1' AND rd_en_d1 = '0') THEN
-            rd_en_d1 <= '1';
-          END IF;
-        END IF;
-      END PROCESS;
    
       pr_r_en       <= rd_en_i AND NOT EMPTY AND rd_en_d1;
       expected_dout <= rand_num(C_DOUT_WIDTH-1 DOWNTO 0);
@@ -145,7 +136,7 @@ BEGIN
         IF(RESET = '1') THEN
           data_chk <= '0';
         ELSIF (RD_CLK'event AND RD_CLK='1') THEN
-          IF((EMPTY = '0') AND (rd_en_i = '1' AND rd_en_d1 = '1')) THEN
+          IF(EMPTY = '0') THEN
             IF(DATA_OUT = expected_dout) THEN
               data_chk <= '0';
             ELSE

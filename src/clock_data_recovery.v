@@ -72,7 +72,7 @@ always @ (posedge clk_x8 or posedge rst)
                 d_out <= history[0];
                 d_out_valid <= 1;
             end
-            clk_counter <= clk_counter + 1;
+            clk_counter <= clk_counter + 1'b1;
         end
         
         // Detect data transition:

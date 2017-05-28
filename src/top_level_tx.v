@@ -26,8 +26,8 @@ module top_level_tx(
 	reg data_led;
 	reg idle_led;
 	reg prbs_led;
-	reg fifo_write_enable;
-	reg fifo_write_enable_prev;
+	reg clk_external_s;
+	reg clk_external_s_prev;
 	reg [7:0] leds;
 	
 	assign IO_P2 = {~fifo_full, {9{1'bZ}}};
@@ -65,7 +65,7 @@ module top_level_tx(
 		.wr_clk(clk_100mhz),
 		.rd_clk(clk_bit),
 		.din(fifo_d_in),
-		.wr_en(fifo_write_enable && !fifo_write_enable_prev),
+		.wr_en(clk_external_s && !clk_external_s_prev),
 		.rd_en(fifo_read_enable),
 		.dout(tx_d_in),
 		.full(),
@@ -111,10 +111,10 @@ end
 
 always @ (posedge rst or posedge clk_100mhz) begin
 	if (rst) begin
-		{fifo_write_enable, fifo_write_enable_prev} <= 2'b0;
+		{clk_external_s, clk_external_s_prev} <= 2'b0;
 	end else begin
-		fifo_write_enable <= clk_external;
-		fifo_write_enable_prev <= fifo_write_enable;
+		clk_external_s <= clk_external;
+		clk_external_s_prev <= clk_external_s;
 	end
 end
 
