@@ -1,7 +1,7 @@
 Fibre Optic FPGA
 ================
 
-<img src="sim_output.png">
+<img src="fpga_block_diagram.png">
 
 We built (in a small team) a 10Mbps fibre optic link for a CUED 3rd year project. The other two members worked mostly on the analogue electronics side; on the digital side, we had an FPGA at each end doing
 
@@ -11,6 +11,8 @@ We built (in a small team) a 10Mbps fibre optic link for a CUED 3rd year project
 - Simple parallel bus + FIFO interface connected to TX and RX modules, exposed on IO pins
 
 The chosen link application was CCTV. A Raspberry Pi encodes the output of a camera as 1080p h.264 video, in real time. A simple userspace program bitbashes this into the FPGA's TX FIFO. The process is reversed at the other end of the link, and live 1080p video is displayed via HDMI.
+
+<img src="sim_output.png">
 
 Directories
 -----------

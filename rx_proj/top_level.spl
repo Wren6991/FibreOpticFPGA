@@ -1,0 +1,14 @@
+[Inputs]
+clk_100mhz_in
+=Switch[5:0]=
+[Outputs]
+=IO_P8[7:0]=
+=LED[7:0]=
+=SevenSegment[7:0]=
+=SevenSegmentEnable[2:0]=
+[BiDir]
+=IO_P9[7:0]=
+=IO_P7[7:0]=
+[ATTRIBUTES]
+VeriModel top_level
+
